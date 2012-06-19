@@ -9,7 +9,7 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Gnufool
+title : gnufoo
 tagline: Approximating success one failure at a time
 author :
   name : Shane Celis
@@ -81,7 +81,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : gnufool
+      short_name : secelis
     livefyre :
       site_id : 123
     intensedebate :
