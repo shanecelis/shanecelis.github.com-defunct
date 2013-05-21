@@ -82,8 +82,8 @@ she feel is best for the reader.  Here is an [example literate
 program]({{site.url}}/assets/images/hello-emacsy-paper.pdf) and its
 [literate source
 code]({{site.url}}/assets/images/hello-emacsy.nw.txt); it uses
-literate programming tool [noweb](http://www.cs.tufts.edu/~nr/noweb/).
-I wrote for the Emacsy project which I proposed as [a Google Summer of
+the literate programming tool [noweb](http://www.cs.tufts.edu/~nr/noweb/).
+I wrote those for the Emacsy project which I proposed as [a Google Summer of
 Code
 project](https://google-melange.appspot.com/gsoc/proposal/review/google/gsoc2013/shanecelis/1).
 
