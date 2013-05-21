@@ -210,8 +210,8 @@ My hope is that it will help me avoid the story I outlined at the
 beginning where collaborators are shut out of participating because
 the edifice one builds becomes an inscrutable labyrinth; however,
 literate programming may be a double-edged sword due to it raising the
-barrier to entry.  But I haven't gotten the chance to actually test
-this out yet.  My current projects are solo so far, but I am enjoying
-trying to program literately.  There is a grandeur in this kind of
-programming.
+barrier to entry.  I haven't gotten the chance to see whether literate
+programming helps or hurts a project.  My current projects are solo so
+far, but I am enjoying trying to program literately.  There is a
+grandeur in this kind of programming.
 
