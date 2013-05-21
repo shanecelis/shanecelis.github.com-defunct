@@ -80,9 +80,11 @@ program, one begins by writing a document for someone to read.  Within
 the document, one specifies sections of code in whatever order he or
 she feel is best for the reader.  Here is an [example literate
 program]({{site.url}}/assets/images/hello-emacsy-paper.pdf) and its
-[source]({{site.url}}/assets/images/hello-emacsy.nw.txt) which uses
-[noweb](http://www.cs.tufts.edu/~nr/noweb/) that I wrote for Emacsy
-which I proposed as [a Google Summer of Code
+[literate source
+code]({{site.url}}/assets/images/hello-emacsy.nw.txt); it uses
+literate programming tool [noweb](http://www.cs.tufts.edu/~nr/noweb/).
+I wrote for the Emacsy project which I proposed as [a Google Summer of
+Code
 project](https://google-melange.appspot.com/gsoc/proposal/review/google/gsoc2013/shanecelis/1).
 
 
@@ -147,8 +149,8 @@ readily inspectable, wholly knowable, effortlessly editable.  Most of
 the literate programming tools use LaTeX as their documentation
 language because Knuth, who started it all, did.  And it is comforting
 that my documentation and code is in plaintext, can be checked in to
-git and diff'd, but that doesn't prevent me from using rich means to
-better describe what my program does, should do, and can inspire
+git and diff'd, but that doesn't prevent me from using a richer medium
+to better describe what my program does, should do, and can inspire
 others to do.
 
 Disadvantages
