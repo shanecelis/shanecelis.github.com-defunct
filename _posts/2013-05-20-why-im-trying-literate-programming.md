@@ -3,7 +3,7 @@ layout: post
 title: "Why I'm Trying Literate Programming"
 description: ""
 category: 
-tags: []
+tags: [literate programming, emacs]
 ---
 {% include JB/setup %}
 
