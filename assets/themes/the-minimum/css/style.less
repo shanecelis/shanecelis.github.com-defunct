@@ -27,7 +27,7 @@ a {
 		text-decoration: none;
 	}
 	&:hover {
-		color: lighten(@main-font-color, 10%);
+		color: lighten(@main-font-color, 20%);
 		text-decoration: none;
 	}
 }
@@ -118,7 +118,7 @@ pre {
 		a {
 			&:link { border-bottom: 1px dotted @accent-color; }
 			&:visited { border-bottom: 1px dotted darken(@accent-color, 10%); }
-			&:hover { border-bottom: 1px dotted lighten(@accent-color, 10%); }
+			&:hover { border-bottom: 1px solid darken(@accent-color, 20%); }
 		}
 
 		blockquote {
@@ -129,7 +129,7 @@ pre {
 				margin-right: 0;
 			}
 		}
-		ul, ol, dl { padding-left: 0; }
+//		ul, ol, dl { padding-left: 0; }
 		ul { list-style: square; }
 		ol { list-style: decimal; }
 		li, dt, dd {
@@ -140,7 +140,7 @@ pre {
 			padding: 2px 5px;
 			white-space: nowrap;
 			border: 1px solid #CCC;
-			background-color: #F8F8F8;
+//			background-color: #F8F8F8;
 			-webkit-border-radius: 3px;
 			-moz-border-radius: 3px;
 			border-radius: 3px;
