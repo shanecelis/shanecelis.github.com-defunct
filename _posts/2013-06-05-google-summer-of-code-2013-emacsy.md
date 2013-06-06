@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Google Summer of Code 2013 and Emacsy"
+title: "Google Summer of Code 2013: Emacsy"
 description: ""
 category: Emacsy
 tags: [gsoc, emacsy, emacs, guile, vim]
@@ -16,7 +16,7 @@ an application while it is running. Emacsy harbors no ambition to
 become a text editor because there is already a great Emacsy text
 editor: Emacs.  I'd like to use this post to address some features and
 implementation details that I'm personally excited about: how to do
-online help; going beyond Emacs to do job control; and some comments
+online help, going beyond Emacs to do job control, and some comments
 on whether Emacsy's "shell" ought to be special.
 
 The [GSoC proposal has many
