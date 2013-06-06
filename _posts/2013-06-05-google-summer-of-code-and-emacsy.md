@@ -15,7 +15,9 @@ attempt to extract "the Emacs way" of using, augmenting, and extending
 an application while it is running. Emacsy harbors no ambition to
 become a text editor because there is already a great Emacsy text
 editor: Emacs.  I'd like to use this post to address some features and
-implementation details that I'm personally excited about.
+implementation details that I'm personally excited about: how to do
+online help; going beyond Emacs to do job control; and some comments
+on whether Emacsy's "shell" ought to be special.
 
 The [GSoC proposal has many
 details](https://google-melange.appspot.com/gsoc/proposal/review/google/gsoc2013/shanecelis/1)
@@ -44,12 +46,18 @@ mind when deciding what features to implement and how.
 
 ## Help will always be given in Emacsy to those who ask for it
 
-Emacs has one of the most comprehensive online help systems; there is
-really nothing else like it; this is why it can claim to be
+Emacs has the most comprehensive online help system of any
+application; there is really nothing else like it. This is the reason
+for its claim to be
 [self-documenting](http://www.emacswiki.org/emacs/SelfDocumentation).
-If you don't know what the key sequence `M-C-\` does, then hit `C-h k
-M-C-\` and Emacs will tell you that it's bound to the procedure
+Unfortunately because there isn't anything else like it, it's seems a
+bit alien at first.  If you don't know what the key sequence `M-C-\`
+does, then hit `C-h k M-C-\` and Emacs will tell you that it's bound
+to the procedure
 [`indent-region`](http://www.gnu.org/software/emacs/manual/html_node/elisp/Region-Indent.html).
+(If this notation `C-h` for control-h is unfamiliar, please see [Sacha
+Chua's excellent one pager for
+beginners](http://sachachua.com/blog/2013/05/how-to-learn-emacs-a-hand-drawn-one-pager-for-beginners/).)
 If you don't know what the procedure `indent-region` does, then hit
 `C-h f indent-region` and Emacs will describe it and even provide a
 link to the source code.  One question I've been struggling with is,
@@ -65,7 +73,7 @@ to mind:
   Should they be clickable? Of course! Integrator, please implement
   these text features that may have nothing to do with your
   application.  This seems like too high a burden for integrators,
-  even if it is cool.
+  even if it would be cool.
 
 * **Minibuffer to the max.** Just use the minibuffer for
   everything. We can get away with using the minibuffer for a lot of
@@ -95,9 +103,9 @@ can quit `C-g` it. But wouldn't it be nice to just suspend that
 command like you would in the shell?  Just hit `C-z` to suspend
 it. Then maybe type `M-x background` to continue running it in the
 background. That's a feature that we can implement in Emacsy, but how?
-Allowing for job control brings up the issue of concurrency.
+Allowing for job control brings up the issue of multitasking.
 
-### Concurrency
+### Multitask like it's 1999
 
 How shall Emacsy support running multiple jobs some of which are in
 the background?  I'm going to suggest a [**cooperative
@@ -117,17 +125,18 @@ is Emacs' process memory with lots of context, and it's focused on
 interactive use.
 
 For an operating system like Unix pre-emptive multitasking is
-absolutely preferred.  The processes' memory areas are isolated from
-one another, so you don't have to worry about one process overwriting
-another's memory.  However, an Emacsy process will not have this
-memory isolation for the commands it runs, so I think it inadvisable
-to use pre-emptive multitasking like threads since they could
-overwrite shared memory unless very carefully synchronized. Instead I
-suggest using coroutines to implement cooperative multitasking.  Only
-one piece of Emacsy code runs at any one time, so a whole class of
-race conditions disappear.  And this doesn't preclude one from using
-threads within Emacsy since threads are natively supported by GNU
-Guile, but they will have to work out the synchronization details.
+absolutely preferred.  Note though that the memory of each process is
+isolated from one another, so you don't have to worry about one
+process overwriting another's memory.  However, an Emacsy command will
+not have its memory isolated from other commands, so it seems
+inadvisable to use a pre-emptive multitasking mechanism like threads
+since the commands could then overwrite shared memory unless very
+carefully synchronized. Instead I suggest using coroutines to
+implement a cooperative multitasking system.  Only one piece of Emacsy
+code runs at any one time; thus a whole class of race conditions
+evaporate.  This doesn't preclude one from using threads within Emacsy
+since threads are natively supported by GNU Guile, but they will have
+to work out the synchronization details themselves.
 
 ## Why not vimy?
 
