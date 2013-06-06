@@ -25,10 +25,10 @@ about the project, but perhaps I should say who this blog entry is
 written for, as I see a handful distinct audiences: application users,
 integrators, and contributors.
 
-* Application users are the users of some application X that has
-  Emacsy been integrated into it.  As Emacsy hasn't been released,
-  there is no real application users to speak of yet, but they're
-  important to keep in mind.
+* Application users are the users of some application X that Emacsy
+  has been integrated into it.  As Emacsy hasn't been released, there
+  is no real application users to speak of yet, but they're important
+  to keep in mind.
 
 * Integrators are developers who embed Emacsy into their own
   application.  They need to know enough to integrate with it but
