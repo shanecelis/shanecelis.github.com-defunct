@@ -50,7 +50,7 @@ Emacs has the most comprehensive online help system of any
 application; there is really nothing else like it. This is the reason
 for its claim to be
 [self-documenting](http://www.emacswiki.org/emacs/SelfDocumentation).
-Unfortunately because there isn't anything else like it, it's seems a
+Unfortunately because there isn't anything else like it, it seems a
 bit alien at first.  If you don't know what the key sequence `M-C-\`
 does, then hit `C-h k M-C-\` and Emacs will tell you that it's bound
 to the procedure
