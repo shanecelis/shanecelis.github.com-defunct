@@ -83,11 +83,11 @@ to mind:
 * **Use the Web, Luke.** This idea struck me recently. What if when we
   wanted to show a lot of information, say about some particular
   function `C-h f some-fun`, we opened a link to some internal web
-  server? Emacsy serves up the information over HTTP and browser gives
-  us a lot of features like links, styling, rich media, and perhaps
-  some customization possibilities. The implementor only needs to send
-  URL requests to some handler application.  Fancier implementors
-  could handle these URLs internally in a web view.
+  server? Emacsy serves up the information over HTTP and the browser
+  gives us a lot of features like links, styling, rich media, and
+  perhaps some customization possibilities. The implementor only needs
+  to send URL requests to some handler application.  Fancier
+  implementors could handle these URLs internally in a web view.
 
 I'm pretty taken with this last idea.  It retains the ability to let
 the application be fully self-documenting without imposing a heavy
